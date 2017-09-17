@@ -22,7 +22,7 @@ public class HotelServiceServiceLocator extends org.apache.axis.client.Service i
     }
 
     // Use to get a proxy class for HotelServicePort
-    private java.lang.String HotelServicePort_address = "http://localhost:8080/HotelService/allroom";
+    private java.lang.String HotelServicePort_address = "http://localhost:8080/HotelService/hotel";
 
     public java.lang.String getHotelServicePortAddress() {
         return HotelServicePort_address;
