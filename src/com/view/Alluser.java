@@ -21,7 +21,9 @@ public class Alluser extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    
+	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("qweqwe");
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -53,13 +55,7 @@ public class Alluser extends HttpServlet {
     			out.println("</head>");
     			out.print("<body>");
     			out.println("<h1>User</h1>");
-    		
-    			
-    		
-    			
-    			
-    			
-    			
+ 
     			out.println("<table border=\"1\" class=\"table table-striped\" width=\"400\">");
     			out.println("<tr>");
     			out.println("<th>Room_id</th>");
