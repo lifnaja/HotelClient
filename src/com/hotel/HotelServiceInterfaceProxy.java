@@ -56,24 +56,6 @@ public class HotelServiceInterfaceProxy implements com.hotel.HotelServiceInterfa
     return hotelServiceInterface.allRoom();
   }
   
-  public boolean updateUser(java.lang.String id, java.lang.String lastName, java.lang.String firstName, java.lang.String identity, java.lang.String phone, java.lang.String email, java.lang.String address, java.lang.String username, java.lang.String password, java.lang.String type) throws java.rmi.RemoteException{
-    if (hotelServiceInterface == null)
-      _initHotelServiceInterfaceProxy();
-    return hotelServiceInterface.updateUser(id, lastName, firstName, identity, phone, email, address, username, password, type);
-  }
-  
-  public com.hotel.Room getupdateRoom(java.lang.String id) throws java.rmi.RemoteException{
-    if (hotelServiceInterface == null)
-      _initHotelServiceInterfaceProxy();
-    return hotelServiceInterface.getupdateRoom(id);
-  }
-  
-  public com.hotel.Room[] findRoomBusy(java.lang.String startDate, java.lang.String endDate) throws java.rmi.RemoteException{
-    if (hotelServiceInterface == null)
-      _initHotelServiceInterfaceProxy();
-    return hotelServiceInterface.findRoomBusy(startDate, endDate);
-  }
-  
   public com.hotel.Room deleteRoom(java.lang.String id) throws java.rmi.RemoteException{
     if (hotelServiceInterface == null)
       _initHotelServiceInterfaceProxy();
@@ -90,6 +72,24 @@ public class HotelServiceInterfaceProxy implements com.hotel.HotelServiceInterfa
     if (hotelServiceInterface == null)
       _initHotelServiceInterfaceProxy();
     return hotelServiceInterface.updateRoom(id, roomID, type, price);
+  }
+  
+  public boolean updateUser(java.lang.String id, java.lang.String lastName, java.lang.String firstName, java.lang.String identity, java.lang.String phone, java.lang.String email, java.lang.String address, java.lang.String username, java.lang.String password, java.lang.String type) throws java.rmi.RemoteException{
+    if (hotelServiceInterface == null)
+      _initHotelServiceInterfaceProxy();
+    return hotelServiceInterface.updateUser(id, lastName, firstName, identity, phone, email, address, username, password, type);
+  }
+  
+  public com.hotel.Room getupdateRoom(java.lang.String id) throws java.rmi.RemoteException{
+    if (hotelServiceInterface == null)
+      _initHotelServiceInterfaceProxy();
+    return hotelServiceInterface.getupdateRoom(id);
+  }
+  
+  public com.hotel.Room[] findRoomBusy(java.lang.String startDate, java.lang.String endDate) throws java.rmi.RemoteException{
+    if (hotelServiceInterface == null)
+      _initHotelServiceInterfaceProxy();
+    return hotelServiceInterface.findRoomBusy(startDate, endDate);
   }
   
   public boolean createRoom(java.lang.String roomID, java.lang.String type, java.lang.String price) throws java.rmi.RemoteException{
