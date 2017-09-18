@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Createroom
  */
-@WebServlet("/createroom")
-public class Createroom extends HttpServlet {
+@WebServlet("/createuser")
+public class Createuser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -29,11 +29,17 @@ public class Createroom extends HttpServlet {
 	out.println("<head><base href=\"http://localhost:8080/HotelClient/\"></head>");
 	out.print("<body>");
 	
-	out.println("<form action=\"save\">");
-	out.println("RoomID : <input type=\"text\" name=\"roomID\" value=\"\"><br>");
-	out.println("RoomType: <input type=\"text\" name=\"type\" value=\"\"><br>");
-	out.println("Price : <input type=\"text\" name=\"price\" value=\"\"><br>");
-	out.println("<input type=\"submit\" value=\"allroom\">");
+	out.println("<form action=\"saveuser\">");
+	out.println("Firstname: <input type=\"text\" name=\"firstname\" value=\"\"><br>");
+	out.println("Lastname : <input type=\"text\" name=\"lastname\" value=\"\"><br>");
+	out.println("Identity : <input type=\"text\" name=\"identity\" value=\"\"><br>");
+	out.println("Phone : <input type=\"text\" name=\"phone\" value=\"\"><br>");
+	out.println("Email : <input type=\"text\" name=\"email\" value=\"\"><br>");
+	out.println("Address : <input type=\"text\" name=\"address\" value=\"\"><br>");
+	out.println("Username : <input type=\"text\" name=\"username\" value=\"\"><br>");
+	out.println("Password : <input type=\"text\" name=\"password\" value=\"\"><br>");
+	out.println("Type : <input type=\"text\" name=\"type\" value=\"\"><br>");
+	out.println("<input type=\"submit\" value=\"alluser\">");
 	out.println("</form>");
 	
 	out.println("</body>");

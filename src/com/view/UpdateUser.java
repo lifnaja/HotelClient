@@ -16,8 +16,8 @@ import com.hotel.HotelServiceInterfaceProxy;
 /**
  * Servlet implementation class UpdateAction
  */
-@WebServlet("/update")
-public class UpdateAction extends HttpServlet {
+@WebServlet("/updateuser")
+public class UpdateUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
@@ -36,8 +36,8 @@ public class UpdateAction extends HttpServlet {
     	// connect soap
     	HotelServiceInterfaceProxy soap = new HotelServiceInterfaceProxy();
     	
-    	com.hotel.Room room = null;
-    	room = soap.getupdateRoom(id);
+    	com.hotel.User user = null;
+    	user = soap.getupdateUser(id);
 		
 		// out put web
     	out.print("<html>");
@@ -45,11 +45,17 @@ public class UpdateAction extends HttpServlet {
 		out.println("<body>");
 		
 				
-				out.println("<form action=\"save\">");
+				out.println("<form action=\"saveuser\">");
 				out.println("<input type=\"hidden\" name=\"id\" value=\""+id+"\"><br>");
-				out.println("roomID : <input type=\"text\" name=\"roomID\" value=\""+room.getRoomID()+"\"><br>");
-				out.println("type :<input type=\"text\" name=\"type\" value=\""+room.getType()+"\"><br>");
-				out.println("price : <input type=\"text\" name=\"price\" value=\""+room.getPrice()+"\"><br>");
+				out.println("Firstname: <input type=\"text\" name=\"firstname\" value=\""+user.getFirstName()+"\"><br>");
+				out.println("Lastname : <input type=\"text\" name=\"lastname\" value=\""+user.getLastName()+"\"><br>");
+				out.println("Identity : <input type=\"text\" name=\"identity\" value=\""+user.getIdentity()+"\"><br>");
+				out.println("Phone : <input type=\"text\" name=\"phone\" value=\""+user.getPhone()+"\"><br>");
+				out.println("Email : <input type=\"text\" name=\"email\" value=\""+user.getEmail()+"\"><br>");
+				out.println("Address : <input type=\"text\" name=\"address\" value=\""+user.getAddress()+"\"><br>");
+				out.println("Username : <input type=\"text\" name=\"username\" value=\""+user.getUsername()+"\"><br>");
+				out.println("Password : <input type=\"text\" name=\"password\" value=\""+user.getPassword()+"\"><br>");
+				out.println("Type : <input type=\"text\" name=\"type\" value=\""+user.getType()+"\"><br>");
 				out.println("<input type=\"submit\" value=\"á¡éä¢\">");
 				out.println("</form>");
 				

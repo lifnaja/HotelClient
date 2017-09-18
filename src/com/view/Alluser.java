@@ -14,8 +14,8 @@ import com.hotel.HotelServiceInterfaceProxy;
 /**
  * Servlet implementation class Allroom
  */
-@WebServlet("/allroom")
-public class Allroom extends HttpServlet {
+@WebServlet("/alluser")
+public class Alluser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
@@ -30,16 +30,16 @@ public class Allroom extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		///response.getWriter().append("Served at: ").append(request.getContextPath());
-PrintWriter out = new PrintWriter( new OutputStreamWriter(response.getOutputStream(), "UTF8"), true);
+		PrintWriter out = new PrintWriter( new OutputStreamWriter(response.getOutputStream(), "UTF8"), true);
     	
     	// value from web
     	request.setCharacterEncoding("UTF-8");
     	// connect soap
     	HotelServiceInterfaceProxy soap = new HotelServiceInterfaceProxy();
     	
-    	com.hotel.Room[] roomList = null;
+    	com.hotel.User[] userList = null;
     	
-    		roomList = soap.allRoom();
+    	userList = soap.allUser();
     		
     	
     	// output
@@ -52,7 +52,7 @@ PrintWriter out = new PrintWriter( new OutputStreamWriter(response.getOutputStre
     			out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css\" integrity=\"sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M\" crossorigin=\"anonymous\">");
     			out.println("</head>");
     			out.print("<body>");
-    			out.println("<h1>RoomType_And_Price</h1>");
+    			out.println("<h1>User</h1>");
     		
     			
     		
@@ -68,14 +68,21 @@ PrintWriter out = new PrintWriter( new OutputStreamWriter(response.getOutputStre
     			
     			out.println("<tr>");
     					
-    					for (com.hotel.Room room : roomList) {
+    					for (com.hotel.User user : userList) {
     						out.println("<tr>");
-        					out.println("<td width=\"200\">"+room.getId()+"</td>");
-        					out.println("<td width=\"200\">"+room.getType()+"</td>");
-        					out.println("<td width=\"200\">"+room.getPrice()+"</td>");
-        					String id = room.getId();
-        					out.println("<td width=\"50px\"><a href=\"update?id="+id+"\"><button type=\"button\" class=\"btn btn-danger\">�Ѻവ</button></a></td>");
-        					out.println("<td width=\"50px\"><a href=\"delete?id="+id+"\"><button type=\"button\" class=\"btn btn-danger\">ź</button></a></td>");
+        					out.println("<td width=\"200\">"+user.getId()+"</td>");
+        					out.println("<td width=\"200\">"+user.getFirstName()+"</td>");
+        					out.println("<td width=\"200\">"+user.getLastName()+"</td>");
+        					out.println("<td width=\"200\">"+user.getIdentity()+"</td>");
+        					out.println("<td width=\"200\">"+user.getPhone()+"</td>");
+        					out.println("<td width=\"200\">"+user.getEmail()+"</td>");
+        					out.println("<td width=\"200\">"+user.getAddress()+"</td>");
+        					out.println("<td width=\"200\">"+user.getUsername()+"</td>");
+        					out.println("<td width=\"200\">"+user.getPassword()+"</td>");
+        					out.println("<td width=\"200\">"+user.getType()+"</td>");
+        					String id = user.getId();
+        					out.println("<td width=\"50px\"><a href=\"updateuser?id="+id+"\"><button type=\"button\" class=\"btn btn-danger\">�Ѻവ</button></a></td>");
+        					out.println("<td width=\"50px\"><a href=\"deleteuser?id="+id+"\"><button type=\"button\" class=\"btn btn-danger\">ź</button></a></td>");
 							
         					out.println("</tr>");
 						}
