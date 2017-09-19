@@ -38,8 +38,8 @@ public class Createuser extends HttpServlet {
 	out.println("<h1 class=\"display-1\">สร้างผู้ใช้</h1>");
 	out.println("<form action=\"saveuser\">");
 	out.println("<div class=\"form-group\">");
-	out.println("Firstname: <input class=\"form-control\" type=\"text\" name=\"firstname\" value=\"\"><br>");
-	out.println("Lastname : <input class=\"form-control\" type=\"text\" name=\"lastname\" value=\"\"><br>");
+	out.println("Firstname: <input class=\"form-control\" type=\"text\" name=\"lastname\" value=\"\"><br>");
+	out.println("Lastname : <input class=\"form-control\" type=\"text\" name=\"firstname\" value=\"\"><br>");
 	out.println("Identity : <input class=\"form-control\" type=\"text\" name=\"identity\" value=\"\"><br>");
 	out.println("Phone : <input class=\"form-control\" type=\"text\" name=\"phone\" value=\"\"><br>");
 	out.println("Email : <input class=\"form-control\" type=\"text\" name=\"email\" value=\"\"><br>");

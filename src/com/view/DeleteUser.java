@@ -31,9 +31,9 @@ public class DeleteUser extends HttpServlet {
     	
 		String output = "";
 		if (result == false) {
-			output = "Un susess";
+			output = "ทำการลบไม่สำเร็จ";
 		}else {
-			output = "Sussess";
+			output = "ทำการลบสำเร็จ";
 		}
 		
 		// out put web
@@ -45,9 +45,12 @@ public class DeleteUser extends HttpServlet {
 		out.println("</head>");
 		out.print("<body>");
 		out.println("<center>");
-		out.println("<h2>เธ?เธฅเธฅเธฑเธ?เธ—เธ?เน?</h2>");
-		out.println(output+id+"<br><br>");
-		out.println("<a href=\"alluser\">Return Allroom รีเทิร์นกลับ  ออลรูม</a>");
+		out.println("<br>");
+		out.println("<br>");
+		out.println("<h1 class=\"display-3\">ลบผู้ใช้</h1>");
+		out.println(output+"<br><br>");
+		//out.println("<input type=\"submit\" class=\"btn btn-primary\" value=\"บันทึก\" href=\"alluser\">ดูข้อมูลผู้ใช้</input>");
+		out.println("<a href=\"alluser\" class=\"btn btn-info\" role=\"button\">ดูข้อมูลผู้ใช้</a>");
 		out.println("</center>");
 		
 		out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");

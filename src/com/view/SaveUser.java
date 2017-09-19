@@ -56,9 +56,9 @@ public class SaveUser extends HttpServlet {
 				
 		String output = "";
 		if (result == false) {
-			output = "Susess";
+			output = "บันทึกไม่สำเร็จ";
 		}else {
-			output = "Un Susess";
+			output = "บันทึกสำเร็จ";
 		}
 		
 		// out put web
@@ -72,7 +72,7 @@ public class SaveUser extends HttpServlet {
 		out.println("<center>");
 		out.println("<h2>ผลลัพทธ์</h2>");
 		out.println(output+"<br><br>");
-		out.println("<a href=\"alluser\">กลับสู่หน้าหลัก</a>");
+		out.println("<a href=\"alluser\" class=\"btn btn-info\" role=\"button\">ดูข้อมูลผู้ใช้</a>");
 		out.println("</center>");
 		
 		out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");

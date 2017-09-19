@@ -56,7 +56,7 @@ public class Allroom extends HttpServlet {
     			out.println("<br>");
     			out.print("<div class=\"container\">");
     			out.println("<h1 class=\"display-1\">ข้อมูลห้องพัก</h1>");
-    			out.println("<a href=\"createroom\"><button type=\"button\" class=\"btn btn-success\">สร้าง</button></a>");
+    			out.println("<a href=\"createroom\"><button type=\"button\" class=\"btn btn-primary btn-lg btn-block\">สร้าง</button></a>");
     			out.println("<table border=\"1\" class=\"table table-striped\" width=\"400\">");
     			out.println("<tr>");
     			out.println("<th>เลขห้อง</th>");

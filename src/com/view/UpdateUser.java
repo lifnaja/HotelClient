@@ -51,22 +51,23 @@ public class UpdateUser extends HttpServlet {
 		out.println("</head>");
 		out.println("</head>");
 		out.println("<body>");
+		out.print("<div class=\"container\">");
 		
-				
-				out.println("<form action=\"saveuser\">");
+				out.println("<br><h1 class=\"display-3\">แก้ไขผู้ใช้</h1>");
+				out.println("<form class=\"form-control\" action=\"saveuser\">");
 				out.println("<input type=\"hidden\" name=\"id\" value=\""+id+"\"><br>");
-				out.println("Firstname: <input type=\"text\" name=\"firstname\" value=\""+user.getFirstName()+"\"><br>");
-				out.println("Lastname : <input type=\"text\" name=\"lastname\" value=\""+user.getLastName()+"\"><br>");
-				out.println("Identity : <input type=\"text\" name=\"identity\" value=\""+user.getIdentity()+"\"><br>");
-				out.println("Phone : <input type=\"text\" name=\"phone\" value=\""+user.getPhone()+"\"><br>");
-				out.println("Email : <input type=\"text\" name=\"email\" value=\""+user.getEmail()+"\"><br>");
-				out.println("Address : <input type=\"text\" name=\"address\" value=\""+user.getAddress()+"\"><br>");
-				out.println("Username : <input type=\"text\" name=\"username\" value=\""+user.getUsername()+"\"><br>");
-				out.println("Password : <input type=\"text\" name=\"password\" value=\""+user.getPassword()+"\"><br>");
-				out.println("Type : <input type=\"text\" name=\"type\" value=\""+user.getType()+"\"><br>");
-				out.println("<input type=\"submit\" value=\"แก้ไข\">");
+				out.println("Firstname: <input class=\"form-control\" type=\"text\" name=\"lastname\" value=\""+user.getFirstName()+"\"><br>");
+				out.println("Lastname : <input class=\"form-control\" type=\"text\" name=\"firstname\" value=\""+user.getLastName()+"\"><br>");
+				out.println("Identity : <input class=\"form-control\" type=\"text\" name=\"identity\" value=\""+user.getIdentity()+"\"><br>");
+				out.println("Phone : <input class=\"form-control\" type=\"text\" name=\"phone\" value=\""+user.getPhone()+"\"><br>");
+				out.println("Email : <input class=\"form-control\" type=\"text\" name=\"email\" value=\""+user.getEmail()+"\"><br>");
+				out.println("Address : <input class=\"form-control\" type=\"text\" name=\"address\" value=\""+user.getAddress()+"\"><br>");
+				out.println("Username : <input class=\"form-control\" type=\"text\" name=\"username\" value=\""+user.getUsername()+"\"><br>");
+				out.println("Password : <input class=\"form-control\" type=\"text\" name=\"password\" value=\""+user.getPassword()+"\"><br>");
+				out.println("Type : <input class=\"form-control\" type=\"text\" name=\"type\" value=\""+user.getType()+"\"><br>");
+				out.println("<input type=\"submit\" class=\"btn btn-primary\" value=\"บันทึก\">");
 				out.println("</form>");
-				
+				out.println("</div>");
 
 				out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");
     			out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js\" integrity=\"sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4\" crossorigin=\"anonymous\"></script>");
