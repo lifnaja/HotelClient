@@ -26,16 +26,53 @@ public class Createroom extends HttpServlet {
 	response.setContentType("text/html;charset-UTF-8");
 	// out put web
 	out.print("<html>");
-	out.println("<head><base href=\"http://localhost:8080/HotelClient/\"></head>");
+	out.println("<head><base href=\"http://localhost:8080/HotelClient/\">");
+	out.println("<meta charset=\"utf-8\">");
+	out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">");
+	out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css\" integrity=\"sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M\" crossorigin=\"anonymous\">");
+	out.println("</head>");
 	out.print("<body>");
-	
+	out.print("<div class=\"container\">");
+	out.print("<div class=\"container\">");
+	out.println("<div class=\"form-group\">");
 	out.println("<form action=\"save\">");
-	out.println("RoomID : <input type=\"text\" name=\"roomID\" value=\"\"><br>");
+	out.println("<br>");
+	out.println("<br>");
+	out.println("<br>");
+	out.println("<h1 class=\"display-1\">Create Room</h1>");
+	out.println("<div class=\"input-group\">");
+	out.println("<label for=\"price\">รหัสห้อง : </label>");
+	out.println("<input type=\"text\" class=\"form-control\" name=\"roomID\"  aria-describedby=\"basic-addon1\">");
+	out.println("</div>");
+	out.println("<br>");
+	out.println("<div class=\"input-group\">");
+	out.println("<label for=\"price\">ค่าห้อง   : </label>");
+	out.println("<input type=\"text\" class=\"form-control\" name=\"price\"  aria-describedby=\"basic-addon2\">");
+	out.println("</div>");
+	out.println("<br>");
+	out.println("<div class=\"form-group\">");
+	out.println("<label for=\"sel1\">ประเภทห้อง:</label>");
+	out.println("<select class=\"form-control\" name=\"type\">");
+	out.println("<option>king bed</option>");
+	out.println("<option>single bed</option>");
+	out.println("<option>2 king bed</option>");
+	out.println("<option>2 single bed</option>");
+	out.println("</select>");
+	out.println("<br>");
+	out.println("<input type=\"submit\" class=\"btn btn-primary\" value=\"บันทึก\">");
+	out.println("</form>");
+	out.println("</div>");
+	out.println("</div>");
+	out.println("</div>");
+	/*out.println("RoomID : <input type=\"text\" name=\"roomID\" value=\"\"><br>");
 	out.println("RoomType: <input type=\"text\" name=\"type\" value=\"\"><br>");
 	out.println("Price : <input type=\"text\" name=\"price\" value=\"\"><br>");
 	out.println("<input type=\"submit\" value=\"allroom\">");
-	out.println("</form>");
+	out.println("</form>");*/
 	
+	out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");
+	out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js\" integrity=\"sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4\" crossorigin=\"anonymous\"></script>");
+	out.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js\" integrity=\"sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1\" crossorigin=\"anonymous\"></script>");
 	out.println("</body>");
 	out.println("</html>");
 }
