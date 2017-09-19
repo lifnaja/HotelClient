@@ -39,7 +39,7 @@ public class Createroom extends HttpServlet {
 	out.println("<br>");
 	out.println("<br>");
 	out.println("<br>");
-	out.println("<h1 class=\"display-1\">Create Room</h1>");
+	out.println("<h1 class=\"display-1\">สร้างห้อง</h1>");
 	out.println("<div class=\"input-group\">");
 	out.println("<label for=\"price\">รหัสห้อง : </label>");
 	out.println("<input type=\"text\" class=\"form-control\" name=\"roomID\"  aria-describedby=\"basic-addon1\">");

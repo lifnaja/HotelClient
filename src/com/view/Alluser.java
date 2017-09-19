@@ -56,7 +56,7 @@ public class Alluser extends HttpServlet {
     			out.print("<body>");
     			out.println("<center>");
     			out.println("<h1>ข้อมูลผู้ใช้ระบบ</h1>");
-    			out.println("<a href=\"creatuser\"><button type=\"button\" class=\"btn btn-success\">สร้าง</button></a>");
+    			out.println("<a href=\"createuser\"><button type=\"button\" class=\"btn btn-success\">สร้าง</button></a>");
     			out.println("<table border=\"1\" class=\"table table-striped\" width=\"400\">");
     			out.println("<tr>");
     			out.println("<th>id</th>");

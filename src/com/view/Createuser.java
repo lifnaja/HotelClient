@@ -32,20 +32,25 @@ public class Createuser extends HttpServlet {
 	out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css\" integrity=\"sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M\" crossorigin=\"anonymous\">");
 	out.println("</head>");
 	out.print("<body>");
-	
+	out.print("<div class=\"container\">");
+	out.print("<br>");
+	out.print("<br>");
+	out.println("<h1 class=\"display-1\">สร้างผู้ใช้</h1>");
 	out.println("<form action=\"saveuser\">");
-	out.println("Firstname: <input type=\"text\" name=\"firstname\" value=\"\"><br>");
-	out.println("Lastname : <input type=\"text\" name=\"lastname\" value=\"\"><br>");
-	out.println("Identity : <input type=\"text\" name=\"identity\" value=\"\"><br>");
-	out.println("Phone : <input type=\"text\" name=\"phone\" value=\"\"><br>");
-	out.println("Email : <input type=\"text\" name=\"email\" value=\"\"><br>");
-	out.println("Address : <input type=\"text\" name=\"address\" value=\"\"><br>");
-	out.println("Username : <input type=\"text\" name=\"username\" value=\"\"><br>");
-	out.println("Password : <input type=\"text\" name=\"password\" value=\"\"><br>");
-	out.println("Type : <input type=\"text\" name=\"type\" value=\"\"><br>");
-	out.println("<input type=\"submit\" value=\"alluser\">");
+	out.println("<div class=\"form-group\">");
+	out.println("Firstname: <input class=\"form-control\" type=\"text\" name=\"firstname\" value=\"\"><br>");
+	out.println("Lastname : <input class=\"form-control\" type=\"text\" name=\"lastname\" value=\"\"><br>");
+	out.println("Identity : <input class=\"form-control\" type=\"text\" name=\"identity\" value=\"\"><br>");
+	out.println("Phone : <input class=\"form-control\" type=\"text\" name=\"phone\" value=\"\"><br>");
+	out.println("Email : <input class=\"form-control\" type=\"text\" name=\"email\" value=\"\"><br>");
+	out.println("Address : <input class=\"form-control\" type=\"text\" name=\"address\" value=\"\"><br>");
+	out.println("Username : <input class=\"form-control\" type=\"text\" name=\"username\" value=\"\"><br>");
+	out.println("Password : <input class=\"form-control\" type=\"text\" name=\"password\" value=\"\"><br>");
+	out.println("Type : <input class=\"form-control\" type=\"text\" name=\"type\" value=\"\"><br>");
+	out.println("<input type=\"submit\" class=\"btn btn-primary\" value=\"บันทึก\">");
+	out.println("</div>");
 	out.println("</form>");
-	
+	out.println("</div>");
 	out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");
 	out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js\" integrity=\"sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4\" crossorigin=\"anonymous\"></script>");
 	out.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js\" integrity=\"sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1\" crossorigin=\"anonymous\"></script>");
