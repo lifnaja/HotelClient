@@ -18,12 +18,12 @@ public class Createuser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	response.setContentType("text/html;charset-UTF-8");
+	
 	PrintWriter out = new PrintWriter(new OutputStreamWriter(response.getOutputStream(), "UTF8"), true);
 	
 	// value from web
 	String id = request.getParameter("id");
-	
+	response.setContentType("text/html;charset-UTF-8");
 	// out put web
 	out.print("<html>");
 	out.println("<head><base href=\"http://localhost:8080/HotelClient/\"></head>");

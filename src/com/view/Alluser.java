@@ -22,7 +22,7 @@ public class Alluser extends HttpServlet {
      * @see HttpServlet#HttpServlet()
      */
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("qweqwe");
+		
 	}
 
 	/**
@@ -54,14 +54,22 @@ public class Alluser extends HttpServlet {
     			out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css\" integrity=\"sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M\" crossorigin=\"anonymous\">");
     			out.println("</head>");
     			out.print("<body>");
-    			out.println("<h1>User</h1>");
- 
+    			out.println("<center>");
+    			out.println("<h1>ข้อมูลผู้ใช้ระบบ</h1>");
+    			out.println("<a href=\"creatuser\"><button type=\"button\" class=\"btn btn-success\">สร้าง</button></a>");
     			out.println("<table border=\"1\" class=\"table table-striped\" width=\"400\">");
     			out.println("<tr>");
-    			out.println("<th>Room_id</th>");
-    			out.println("<th>Room Type</th>");
-    			out.println("<th>Room Price</th>");
-    			
+    			out.println("<th>id</th>");
+    			out.println("<th>ชื่อ</th>");
+    			out.println("<th>นามสกุล</th>");
+    			out.println("<th>เลขบัตรประชาชน</th>");
+    			out.println("<th>เบอร์โทรศัพท์</th>");
+    			out.println("<th>E-mail</th>");
+    			out.println("<th>ที่อยู่</th>");
+    			out.println("<th>ชื่อผู้ใช้</th>");
+    			out.println("<th>ประเภทผู้ใช้</th>");
+    			out.println("<th></th>");
+    			out.println("<th></th>");
     			out.println("<tr>");
     					
     					for (com.hotel.User user : userList) {
@@ -74,10 +82,10 @@ public class Alluser extends HttpServlet {
         					out.println("<td width=\"200\">"+user.getEmail()+"</td>");
         					out.println("<td width=\"200\">"+user.getAddress()+"</td>");
         					out.println("<td width=\"200\">"+user.getUsername()+"</td>");
-        					out.println("<td width=\"200\">"+user.getPassword()+"</td>");
+        					
         					out.println("<td width=\"200\">"+user.getType()+"</td>");
         					String id = user.getId();
-        					out.println("<td width=\"50px\"><a href=\"updateuser?id="+id+"\"><button type=\"button\" class=\"btn btn-danger\">อับเดต</button></a></td>");
+        					out.println("<td width=\"50px\"><a href=\"updateuser?id="+id+"\"><button type=\"button\" class=\"btn btn-danger\">แก้ไข</button></a></td>");
         					out.println("<td width=\"50px\"><a href=\"deleteuser?id="+id+"\"><button type=\"button\" class=\"btn btn-danger\">ลบ</button></a></td>");
 							
         					out.println("</tr>");
@@ -88,6 +96,7 @@ public class Alluser extends HttpServlet {
     			out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");
     			out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js\" integrity=\"sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4\" crossorigin=\"anonymous\"></script>");
     			out.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js\" integrity=\"sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1\" crossorigin=\"anonymous\"></script>");
+    			out.println("</center>");
     			out.println("</body>");
     			out.println("</html>");
 	}

@@ -52,29 +52,27 @@ public class Allroom extends HttpServlet {
     			out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css\" integrity=\"sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M\" crossorigin=\"anonymous\">");
     			out.println("</head>");
     			out.print("<body>");
-    			out.println("<h1>RoomType_And_Price</h1>");
-    		
+    			out.println("<center>");
     			
-    		
-    			
-    			
-    			
+    			out.println("<h1>ข้อมูลห้องพัก</h1>");
+    			out.println("<a href=\"createroom\"><button type=\"button\" class=\"btn btn-success\">สร้าง</button></a>");
     			
     			out.println("<table border=\"1\" class=\"table table-striped\" width=\"400\">");
     			out.println("<tr>");
-    			out.println("<th>Room_id</th>");
-    			out.println("<th>Room Type</th>");
-    			out.println("<th>Room Price</th>");
-    			
+    			out.println("<th>เลขห้อง</th>");
+    			out.println("<th>ประเภทห้อง</th>");
+    			out.println("<th>ราคาต่อคืน</th>");
+    			out.println("<th></th>");
+    			out.println("<th></th>");
     			out.println("<tr>");
     					
     					for (com.hotel.Room room : roomList) {
     						out.println("<tr>");
-        					out.println("<td width=\"200\">"+room.getId()+"</td>");
+        					out.println("<td width=\"200\">"+room.getRoomID()+"</td>");
         					out.println("<td width=\"200\">"+room.getType()+"</td>");
         					out.println("<td width=\"200\">"+room.getPrice()+"</td>");
         					String id = room.getId();
-        					out.println("<td width=\"50px\"><a href=\"update?id="+id+"\"><button type=\"button\" class=\"btn btn-danger\">อับเดต</button></a></td>");
+        					out.println("<td width=\"50px\"><a href=\"update?id="+id+"\"><button type=\"button\" class=\"btn btn-danger\">แก้ไข</button></a></td>");
         					out.println("<td width=\"50px\"><a href=\"delete?id="+id+"\"><button type=\"button\" class=\"btn btn-danger\">ลบ</button></a></td>");
 							
         					out.println("</tr>");
@@ -85,6 +83,7 @@ public class Allroom extends HttpServlet {
     			out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");
     			out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js\" integrity=\"sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4\" crossorigin=\"anonymous\"></script>");
     			out.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js\" integrity=\"sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1\" crossorigin=\"anonymous\"></script>");
+    			out.println("</center>");
     			out.println("</body>");
     			out.println("</html>");
 	}

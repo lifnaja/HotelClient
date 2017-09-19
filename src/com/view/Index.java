@@ -16,7 +16,7 @@ import com.hotel.HotelServiceInterfaceProxy;
 /**
  * Servlet implementation class Index
  */
-@WebServlet("/Index")
+@WebServlet("/index")
 public class Index extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -38,7 +38,7 @@ public class Index extends HttpServlet {
 		
 		
 		out.println("<img src=\"picture/hotel.jpg\" width=\"300px\"></img>");
-		out.println("<br><img src=\"picture/hotelIcon.png\"></img>");
+		out.println("<br><img src=\"picture/hotelmini.png\"></img>");
 		out.println("<a href=\"allroom\">จัดการข้อมูลห้อง</a><br>");
 		
 		out.println("<img src=\"picture/team.png\"></img>");
