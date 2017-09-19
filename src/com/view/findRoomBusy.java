@@ -25,15 +25,16 @@ public class findRoomBusy extends HttpServlet {
        
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-    	response.setContentType("text/html;charset-UTF-8");
-    	PrintWriter out = new PrintWriter(new OutputStreamWriter(response.getOutputStream(), "UTF8"), true);
-    	
+		
+		PrintWriter out = new PrintWriter(new OutputStreamWriter(response.getOutputStream(), "UTF8"), true);
+		request.setCharacterEncoding("UTF-8");
+		
     	// value from web
     	String startDate = request.getParameter("startDate");
     	String endDate = request.getParameter("endDate");
 
     
-    	System.out.println(startDate+endDate);
+    	
     	
     	// connect soap
     	HotelServiceInterfaceProxy soap = new HotelServiceInterfaceProxy();
@@ -41,26 +42,33 @@ public class findRoomBusy extends HttpServlet {
     	Room[] roomList = null;
    
     	roomList = soap.findRoomBusy(startDate, endDate);	
+    	response.setContentType( "text/html; charset=UTF-8" );
+    	
     	
 		// out put web
     	out.print("<html>");
     	out.println("<head><base href=\"http://localhost:8080/HotelClient/\"></head>");
 		out.println("<body>");
-		
-		out.println("<table border=\"0\">");
-		
-				
+		out.println("<center>");
+			
+			out.println("<p>ข้อมูลห้องพักที่ว่าง</p>");
+			out.println("<table>");
+			out.println("<tr>");
+			out.println("<th>หมายเลขห้อง</th>");
+			out.println("<th>ประเภทห้อง</th>");
+			out.println("<th>ราคา</th>");
+
+			out.println("<tr>");
 				for (com.hotel.Room room : roomList) {
 					out.println("<tr>");
-					out.println("<td>"+room.getId()+"</td>");
 					out.println("<td>"+room.getRoomID()+"</td>");
 					out.println("<td>"+room.getType()+"</td>");
 					out.println("<td>"+room.getPrice()+"</td>");
-					
+					out.println("</tr>");
 				}
-			
-		out.println("</table");
+				out.println("</table");
 		
+		out.println("</center>");
 		out.println("</body>");
 		out.println("</html>");
 		
