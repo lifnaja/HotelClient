@@ -72,11 +72,12 @@ public class SaveAction extends HttpServlet {
 		out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css\" integrity=\"sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M\" crossorigin=\"anonymous\">");
 		out.println("</head>");
 		out.print("<body>");
-		out.println("<center>");
-		out.println("<h2>ผลลัพทธ์</h2>");
+		out.print("<div class=\"container\">");
+		
+		out.println("<h2>ผลลัพธ์</h2>");
 		out.println("<div class=\"alert alert-success\" role=\"alert\"><h3>"+output+"</h3></div><br><br>");
 		out.println("<button type=\"submit\" class=\"btn btn-primary\">กลับสู่หน้าหลัก</button>");
-		out.println("</center>");
+		out.println("</div>");
 		
 		out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");
 		out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js\" integrity=\"sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4\" crossorigin=\"anonymous\"></script>");

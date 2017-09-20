@@ -56,19 +56,20 @@ public class UpdateAction extends HttpServlet {
 		out.println("</head>");
 		out.println("</head>");
 		out.println("<body>");
-		
-			out.println("<div class=\"panel panel-default\">\n" + 
+		out.print("<div class=\"container\">");
+			out.println("<br><br><div class=\"panel panel-default\">\n" + 
 					"  <div class=\"panel-heading\"><h2>แก้ไขข้อมูลห้อง</h2></div>");
 			out.println(" <div class=\"panel-body\">");
 				out.println("<form action=\"save\">");
 				out.println("\n" + 
 						"  <div class=\"form-group\">");
 				out.println("<input type=\"hidden\" name=\"id\" value=\""+id+"\"><br>");
-				out.println("<label><h3>รหัสห้อง : </h3></label><div class=\\\"cm-sd-2\\\"><input type=\"text\" class=\"form-control\" name=\"รหัสห้อง\" value=\""+room.getRoomID()+"\"></div></div><br>");
-				out.println("<label><h3>ประเภท :</h3></label><input type=\"text\"class=\"form-control\" name=\"ประเภทห้อง\" value=\""+room.getType()+"\"><br>");
-				out.println("<label><h3>ราคา :</h3></label> <input type=\"text\"class=\"form-control\" name=\"ราคา\" value=\""+room.getPrice()+"\"><br>");
+				out.println("<label><h3>รหัสห้อง : </h3></label><div class=\"cm-sd-2\"><input type=\"text\" class=\"form-control\" name=\"roomID\" value=\""+room.getRoomID()+"\"></div></div><br>");
+				out.println("<label><h3>ประเภท :</h3></label><input type=\"text\"class=\"form-control\" name=\"type\" value=\""+room.getType()+"\"><br>");
+				out.println("<label><h3>ราคา :</h3></label> <input type=\"text\"class=\"form-control\" name=\"price\" value=\""+room.getPrice()+"\"><br>");
 				out.println("<button type=\"submit\" class=\"btn btn-primary\">แก้ไข</button>");
 				out.println("</form>");
+				out.println(" </div>");
 				out.println(" </div>");
 				out.println(" </div>");
 				
