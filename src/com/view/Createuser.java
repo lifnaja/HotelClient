@@ -45,7 +45,7 @@ public class Createuser extends HttpServlet {
 	out.println("อีเมลล์ : <input class=\"form-control\" type=\"text\" name=\"email\" value=\"\"><br>");
 	out.println("ที่อยู่ : <input class=\"form-control\" type=\"text\" name=\"address\" value=\"\"><br>");
 	out.println("ชื่อผู้ใช้ : <input class=\"form-control\" type=\"text\" name=\"username\" value=\"\"><br>");
-	out.println("รหัสผ่าน : <input class=\"form-control\" type=\"text\" name=\"password\" value=\"\"><br>");
+	out.println("รหัสผ่าน : <input class=\"form-control\" type=\"password\" name=\"password\" value=\"\"><br>");
 	out.println("ประเภทผู้ใช้ : <input class=\"form-control\" type=\"text\" name=\"type\" value=\"\"><br>");
 	out.println("<input type=\"submit\" class=\"btn btn-primary\" value=\"บันทึก\">");
 	out.println("</div>");
