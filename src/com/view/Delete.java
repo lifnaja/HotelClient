@@ -31,9 +31,9 @@ public class Delete extends HttpServlet {
     	
 		String output = "";
 		if (result == false) {
-			output = "Un susess";
+			output = "Unsuccessful";
 		}else {
-			output = "Sussess";
+			output = "Successful";
 		}
 		
 		// out put web
