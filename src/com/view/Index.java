@@ -39,18 +39,27 @@ public class Index extends HttpServlet {
 		out.print("<body>");
 		
 		out.println("<center>");
+		out.print("<div class=\"container\">");
+		out.println("<br><br><h1 class=\"display-1\">Urban Hotel</h1>");
+		out.println("<img src=\"picture/hotel.jpg\" width=\"800px\"></img>");
+		//out.println("<br><img src=\"picture/hotelmini.png\"></img><br>");
+//		out.println("<div class=\"btn-group-vertical\">");
+//		out.println("<a href=\"allroom\" class=\"button\"></a>");
+//		out.println("&nbsp&nbsp&nbsp<a href=\"allroom\" class=\"btn btn-info\" role=\"button\">จัดการข้อมูลห้อง<br></a><br>");
+//		//out.println("<img src=\"picture/team.png\"></img>");
+//		out.println("<a href=\"alluser\" class=\"button\"></a>");
+//		out.println("&nbsp&nbsp&nbsp<a href=\"alluser\" class=\"btn btn-info\" role=\"button\">จัดการข้อมูลผู้ใช้</a><br>");
+//		//out.println("<div><img src=\"picture/event.png\"></img>");
+//		out.println("<a href=\"findRoom\" class=\"button\"></a>");
+//		out.println("&nbsp&nbsp&nbsp<a href=\"findRoom\" class=\"btn btn-info\" role=\"button\">หาห้องพักที่ว่าง<br></a><br>");
+//		out.println("</div>");
+//		out.println("</div>");
 		
-		
-		out.println("<img src=\"picture/hotel.jpg\" width=\"300px\"></img>");
-		out.println("<br><img src=\"picture/hotelmini.png\"></img>");
-		out.println("<a href=\"allroom\">จัดการข้อมูลห้อง</a><br>");
-		
-		out.println("<img src=\"picture/team.png\"></img>");
-		out.println("<a href=\"alluser\">จัดการข้อมูลผู้ใช้</a><br>");
-		
-		out.println("<div><img src=\"picture/event.png\"></img>");
-		out.print("<a href=\"findRoom\">หาห้องพักที่ว่าง</a></div>");
-		
+		out.println("<div class=\"btn-group btn-group-lg\">");
+		out.println("<a href=\"allroom\" class=\"btn btn-primary\">จัดการห้องพัก</a>");
+		out.println("<a href=\"alluser\" class=\"btn btn-primary\">จัดการผู้ใช้</a>");
+		out.println("<a href=\"findRoom\" class=\"btn btn-primary\">ค้นหาห้อง</a>");
+		out.println(" </div>");
 		out.println("</center>");
 		out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");
 		out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js\" integrity=\"sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4\" crossorigin=\"anonymous\"></script>");

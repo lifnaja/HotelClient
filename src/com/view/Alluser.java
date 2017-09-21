@@ -60,7 +60,7 @@ public class Alluser extends HttpServlet {
     			out.println("<br><a href=\"createuser\"><button type=\"button\" class=\"btn btn-primary btn-lg btn-block\">สร้าง</button></a>");
     			out.println("<table border=\"1\" class=\"table table-striped\" width=\"400\">");
     			out.println("<tr>");
-    			out.println("<th>id</th>");
+    			//out.println("<th>id</th>");
     			out.println("<th>ชื่อ</th>");
     			out.println("<th>นามสกุล</th>");
     			out.println("<th>เลขบัตรประชาชน</th>");
@@ -75,7 +75,7 @@ public class Alluser extends HttpServlet {
     					
     					for (com.hotel.User user : userList) {
     						out.println("<tr>");
-        					out.println("<td width=\"200\">"+user.getId()+"</td>");
+        					//out.println("<td width=\"200\">"+user.getId()+"</td>");
         					out.println("<td width=\"200\">"+user.getFirstName()+"</td>");
         					out.println("<td width=\"200\">"+user.getLastName()+"</td>");
         					out.println("<td width=\"200\">"+user.getIdentity()+"</td>");
@@ -94,6 +94,8 @@ public class Alluser extends HttpServlet {
     				
     			out.println("</table");
     			out.println("</div");
+    			out.println("<a href=\"index\" class=\"button\"></a>");
+    			out.println("<a href=\"index\" class=\"btn btn-info\" role=\"button\">กลับหน้าแรก</a>");
     			
     			out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");
     			out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js\" integrity=\"sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4\" crossorigin=\"anonymous\"></script>");

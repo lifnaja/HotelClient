@@ -41,14 +41,17 @@ public class FormFindRoom extends HttpServlet {
 		out.println("</head>");
 		out.println("<body>");
 		out.print("<div class=\"container\">");
-				
-			out.println("<img src=\"picture/event1.png\" ></img>");
+		out.println("<center>");
+		out.println("<h1 class=\"display-1\">ค้นหาห้อง</h1>");
+			out.println("<br><br><img src=\"picture/event1.png\" ></img>");
 				out.println("<form action=\"findRoomBusy\">");
 				out.println("check-in : <input type=\"date\" name=\"startDate\" value=\"\"><br>");
 				out.println("check-out : <input type=\"date\" name=\"endDate\" value=\"\"><br>");
-				out.println("<br><input type=\"submit\" value=\"ค้นหา\">");
+				out.println("<br><input type=\"submit\" class=\"btn btn-info\" value=\"ค้นหา\">");
+				out.println("<a href=\"index\" class=\"button\"></a>");
+				out.println("<a href=\"index\" class=\"btn btn-info\" role=\"button\">กลับหน้าแรก</a>");
 				out.println("</form>");
-				
+				out.println("</center>");		
 		out.println("</div>");
 		out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");
 		out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js\" integrity=\"sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4\" crossorigin=\"anonymous\"></script>");

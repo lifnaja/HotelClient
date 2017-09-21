@@ -57,6 +57,7 @@ public class UpdateAction extends HttpServlet {
 		out.println("</head>");
 		out.println("<body>");
 		out.print("<div class=\"container\">");
+		out.print("<center>");
 			out.println("<br><br><div class=\"panel panel-default\">\n" + 
 					"  <div class=\"panel-heading\"><h2>แก้ไขข้อมูลห้อง</h2></div>");
 			out.println(" <div class=\"panel-body\">");
@@ -71,6 +72,7 @@ public class UpdateAction extends HttpServlet {
 				out.println("</form>");
 				out.println(" </div>");
 				out.println(" </div>");
+				out.print("</center>");
 				out.println(" </div>");
 				
 				out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");
