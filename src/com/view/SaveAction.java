@@ -76,7 +76,7 @@ public class SaveAction extends HttpServlet {
 		
 		out.println("<h2>ผลลัพธ์</h2>");
 		out.println("<div class=\"alert alert-success\" role=\"alert\"><h3>"+output+"</h3></div><br><br>");
-		out.println("<a href=\"allroom\"><button type=\"button\" class=\"btn btn-primary\">กลับสู่หน้าหลัก</button></a>");
+		out.println("<a href=\"allroom\"><button type=\"button\" class=\"btn btn-primary\">ดูข้อมูลห้องพัก</button></a>");
 		out.println("</div>");
 		
 		out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>");
